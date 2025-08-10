@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">    
+    <title>index</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+    <main class="container plan-main">
+      <div class="row justify-content-center">
+        <div class="col-10 ">
+          <!-- 選單 -->
+            <div class="bg-transparent mb-4"> 
+            <ul class="nav nav-pills justify-content-center">
+                <li class="nav-item me-4">
+                <a class="nav-link text-dark rounded-4 border  bg-secondary-subtle" href="index.html">
+                    <span class="material-icons-outlined align-bottom me-1">face</span>個人資料</a>
+                </li>
+                <li class="nav-item me-4">
+                <a class="nav-link text-dark rounded-4 border bg-white" href="record.html">
+                    <span class="material-icons-outlined align-bottom me-1">pending_actions</span>預約紀錄</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link text-dark rounded-4  bg-white" aria-current="page" href="plan.html">
+                    <span class="material-icons-outlined align-bottom me-1">list_alt</span>職旅計劃</a>
+                </li>
+            </ul>
+            </div>
+
+          <!-- 選單內容 -->
+          <div class="bg-white p-5 rounded-5 shadow">
+            <div>
+                <!-- 職旅計劃概況 -->
+                <div class="mt-5 d-flex">
+                    <div class="flex-shrink-0 info-title me-4">
+                    <h2 class="fs-4 fw-medium">個人資料</h2>
+                    </div>
+
+                    <div class="w-100">
+                        <!-- 頭貼 -->
+                        <div class="d-flex mb-4">
+                            <img src="/assets/images/avatar.png" alt="avatar" class="userinfoimg rounded-circle border me-3">
+                            <div class="mt-auto">
+                                <label for="formFile" class="btn border py-3 px-4 rounded-4"><span class="material-icons-outlined align-bottom pe-1">file_upload</span>更新頭貼</label>
+                                <input class="d-none" type="file" id="formFile">
+                            </div>
+                        </div>
+
+                        <!-- 姓名 -->
+                        <div class="form-floating mb-3 pb-4">
+                            <input type="text" class="form-control" style="height: 60px;" id="career-desc" placeholder="Mokumaru" value="Mokumaru">
+                            <label for="career-desc">姓名</label>
+                        </div>
+
+                        <!-- 性別 -->
+                        <p class="pb-2">性別</p>
+                        <div class="px-2 pb-4">
+                            <div class="form-check form-check-inline me-4 mb-2">
+                            <input class="form-check-input me-1" type="radio" name="gender" id="girl" value="girl" checked>
+                            <label class="form-check-label" for="girl">女性</label>
+                            </div>
+                            <div class="form-check form-check-inline me-4 mb-2">
+                            <input class="form-check-input me-1" type="radio" name="gender" id="boy" value="boy">
+                            <label class="form-check-label" for="boy">男性</label>
+                            </div>
+                            <div class="form-check form-check-inline me-4 mb-2">
+                            <input class="form-check-input me-1" type="radio" name="gender" id="secret" value="secret">
+                            <label class="form-check-label" for="secret">不願透露</label>
+                            </div>
+                        </div>
+                        
+
+                        <!-- 生日 -->
+                        <div class="form-floating mb-3 pb-4">
+                            <input type="date" class="form-control" style="height: 60px;" id="birthdate" placeholder="2000-01-10" value="2000-01-10">
+                            <label for="birthdate">生日</label>
+                        </div>
+
+                        <!-- 密碼 -->
+                        <div class="pb-4">
+                            <p class="pb-2">密碼</p>
+                            <button type="button" class="btn btn-transparent border rounded-4 py-3 pe-3 ps-4 me-4">修改密碼<span class="material-icons-outlined align-bottom ms-1">chevron_right</span></button>
+                        </div>
+
+                        <!-- 信箱 -->
+                        <div class="form-floating mb-3 pb-4">
+                            <input type="email" class="form-control" style="height: 60px;" id="email" placeholder="mokumaru@mail.com" value="mokumaru@mail.com">
+                            <label for="email">信箱</label>
+                            <span class="text-body-tertiary ps-2">盡量勿使用Yahoo或Hotmail郵件信箱，以免因擋信、漏信</span>
+                        </div>
+
+                        <!-- 聯絡電話 -->
+                        <div class="form-floating mb-3 pb-4">
+                            <input type="tel" class="form-control" style="height: 60px;" id="tel" placeholder="09-1234-5678" value="09-1234-5678">
+                            <label for="tel">聯絡電話</label>
+                        </div>
+
+                        <!-- 通訊地址 -->
+                        <div class="form-floating">
+                            <input type="text" class="form-control" style="height: 60px;" id="address" placeholder="高雄市三民區九如一路 87 號" value="高雄市三民區九如一路 87 號">
+                            <label for="address">通訊地址</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5 d-flex justify-content-center">
+                <button type="button" class="btn btn-transparent border rounded-4 py-3 pe-3 ps-4 me-4">重新填寫<span class="material-icons-outlined align-bottom ms-1">chevron_right</span></button>
+                <button type="button" class="btn btn-dark rounded-4 py-3 pe-3 ps-4">儲存更新<span class="material-icons-outlined align-bottom ms-1">chevron_right</span></button>
+            </div>
+        </div>
+      </div>
+    </main>
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
